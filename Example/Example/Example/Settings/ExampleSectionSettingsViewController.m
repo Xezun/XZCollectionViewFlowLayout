@@ -59,10 +59,45 @@ typedef NS_ENUM(NSUInteger, ExampleSectionSelectNumberType) {
         case 1:
             switch (indexPath.row) {
                 case 0:
-                    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", self.lineAlignmentStyle];
+                    switch (self.lineAlignmentStyle) {
+                        case ExampleSectionModelLineAlignmentStyleLeading:
+                            cell.detailTextLabel.text = @"leading";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyleCenter:
+                            cell.detailTextLabel.text = @"center";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyleTraling:
+                            cell.detailTextLabel.text = @"traling";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyleJustified:
+                            cell.detailTextLabel.text = @"justified";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyleJustifiedLeading:
+                            cell.detailTextLabel.text = @"justifiedLeading";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyleJustifiedCenter:
+                            cell.detailTextLabel.text = @"justifiedCenter";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyleJustifiedTrailing:
+                            cell.detailTextLabel.text = @"justifiedTrailing";
+                            break;
+                        case ExampleSectionModelLineAlignmentStyle6:
+                            cell.detailTextLabel.text = @"mixed";
+                            break;
+                    }
                     break;
                 case 1:
-                    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", self.interitemAlignment];
+                    switch (self.interitemAlignment) {
+                        case XZCollectionViewInteritemAlignmentAscended:
+                            cell.detailTextLabel.text = @"ascended";
+                            break;
+                        case XZCollectionViewInteritemAlignmentMedian:
+                            cell.detailTextLabel.text = @"median";
+                            break;
+                        case XZCollectionViewInteritemAlignmentDescended:
+                            cell.detailTextLabel.text = @"descended";
+                            break;
+                    }
                     break;
                 default:
                     break;

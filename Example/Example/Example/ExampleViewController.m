@@ -108,7 +108,7 @@
 }
 
 - (IBAction)navBackButtonAction:(id)sender {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"点击 Header/Footer 可调整 Section 配置；点击 Cell 可调整 Cell 的配置。" preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"点击 Header/Footer 可调整 Section 配置；\n点击 Cell 可调整 Cell 的配置。" preferredStyle:(UIAlertControllerStyleAlert)];
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
 }

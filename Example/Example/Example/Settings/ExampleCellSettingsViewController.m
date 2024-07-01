@@ -47,9 +47,19 @@
             break;
         case 1:
             if (_isCustomized) {
-                cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", (long)_interitemAlignment];
+                switch (self.interitemAlignment) {
+                    case XZCollectionViewInteritemAlignmentAscended:
+                        cell.detailTextLabel.text = @"ascended";
+                        break;
+                    case XZCollectionViewInteritemAlignmentMedian:
+                        cell.detailTextLabel.text = @"median";
+                        break;
+                    case XZCollectionViewInteritemAlignmentDescended:
+                        cell.detailTextLabel.text = @"descended";
+                        break;
+                }
             } else {
-                cell.detailTextLabel.text = @"";
+                cell.detailTextLabel.text = @"由 section 决定";
             }
             break;
         case 2:
